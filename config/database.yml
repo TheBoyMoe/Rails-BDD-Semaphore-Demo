@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  username: bdd_demo
+  password: password
+
+
+development:
+  <<: *default
+  database: Rails-Testing-by-Semaphore_development
+
+test: &test
+  <<: *default
+  database: Rails-Testing-by-Semaphore_test
+
+production:
+  <<: *default
+  database: Rails-Testing-by-Semaphore_production
+  username: Rails-Testing-by-Semaphore
+  password: <%= ENV['RAILS-TESTING-BY-SEMAPHORE_DATABASE_PASSWORD'] %>
+
+cucumber:
+  <<: *test
