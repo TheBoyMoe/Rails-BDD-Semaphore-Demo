@@ -1,24 +1,6 @@
-# README
+# Rails Testing the Semaphore Way
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://semaphoreci.com/api/v1/theboymo/rails-bdd-semaphore-demo/branches/master/badge.svg)](https://semaphoreci.com/theboymo/rails-bdd-semaphore-demo)  
 
-Things you may want to cover:
+Rails 5 app built following the 'Rails Testing Handbook' published by Semaphore
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
