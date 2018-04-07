@@ -8,7 +8,7 @@ Scenario: Signing Up
   Given I visit the homepage
   When I fill in the sign up form
   And I confirm the email
-  Then I should see that my account is confirmed
+  Then should see that my account is confirmed
 
 Scenario: User Logs In
   Given I am a registered user
