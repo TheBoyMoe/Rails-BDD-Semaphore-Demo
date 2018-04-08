@@ -33,6 +33,7 @@ group :test do
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'capybara', '~> 2.12.0'
   gem 'simplecov', require: false
+  gem 'email_spec', '~> 2.2'
 end
 
 group :development do

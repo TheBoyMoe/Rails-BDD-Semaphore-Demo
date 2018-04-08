@@ -1,40 +1,54 @@
 Given("I visit the homepage") do
-    pending # Write code here that turns the phrase above into concrete actions
+  visit root_path
 end
 
 When("I fill in the sign up form") do
-    pending # Write code here that turns the phrase above into concrete actions
+  click_link 'Sign up'
+
+  fill_in 'user_email', with: 'test@example.com'
+  fill_in 'user_password', with: 'password'
+  fill_in 'user_password_confirmation', with: 'password'
+  click_button 'Sign up'
 end
 
 When("I confirm the email") do
-    pending # Write code here that turns the phrase above into concrete actions
+  open_email('test@ex.com')
+  visit_in_email('Confirm my account')
 end
 
 Then("should see that my account is confirmed") do
-    pending # Write code here that turns the phrase above into concrete actions
+  message = 'Your email address has been successfully confirmed'
+  expect(page).to have_content(message)
 end
 
 Given("I am a registered user") do
-    pending # Write code here that turns the phrase above into concrete actions
+  @registered_user = FactoryBot.create(:user,
+                                       email: 'test@example.com',
+                                       password: 'password')
 end
 
 When("I fill in the login form") do
-    pending # Write code here that turns the phrase above into concrete actions
+  fill_in 'user_email', with: 'test@example.com'
+  fill_in 'user_password', with: 'password'
 end
 
 Then("I should be logged in") do
-    pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Logged in')
 end
 
 Given("I am logged in") do
-    pending # Write code here that turns the phrase above into concrete actions
+  visit root_path
+
+  fill_in 'user_email', with: 'test@example.com'
+  fill_in 'user_password', with: 'password'
+  click_button 'Log in'
 end
 
 When("I click on the logout button") do
-    pending # Write code here that turns the phrase above into concrete actions
+  click_button 'Log out'
 end
 
 Then("I should be redirected to the log in page") do
-    pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content('Log in')
 end
 
