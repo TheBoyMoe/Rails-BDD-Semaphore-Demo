@@ -30,10 +30,11 @@ end
 When("I fill in the login form") do
   fill_in 'user_email', with: 'test@example.com'
   fill_in 'user_password', with: 'password'
+  click_button 'Log in'
 end
 
 Then("I should be logged in") do
-  expect(page).to have_content('Logged in')
+  expect(page).to have_content('Signed in successfully')
 end
 
 Given("I am logged in") do
