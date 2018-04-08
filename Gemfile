@@ -27,6 +27,7 @@ group :development, :test do
     git: "https://github.com/thoughtbot/shoulda-matchers.git",
     branch: "rails-5"
   gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
+  gem 'email_spec', '~> 2.2'
 end
 
 group :test do
@@ -34,7 +35,6 @@ group :test do
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
   gem 'capybara', '~> 2.12.0'
   gem 'simplecov', require: false
-  gem 'email_spec', '~> 2.2'
 end
 
 group :development do
