@@ -1,9 +1,7 @@
 require 'simplecov'
-Simplecov.start
+SimpleCov.start
 
 require 'capybara/rspec'
-require 'email_spec'
-require 'email_spec/rspec'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -5,12 +5,13 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
-require 'email_spec/cucumber'
-
 
 ActiveRecord::Migration.maintain_test_schema!
 
 Capybara.server = :puma
+
+# load spec helper files
+Dir[Rails.root.join('spec/support/**/*.rb')].each{|f| require f}
 
 RSpec.configure do |config|
 
@@ -19,6 +20,11 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 
   config.include Capybara::DSL
+  
+  # load the Devise test helpers
+  config.include Warden::Test::Helpers
+  config.include Devise::TestHelpers, type: :controller
+  config.include ControllerHelpers, type: :controller
 
   # cleaning strategy rof RSpec tests
   config.before(:suite) do
