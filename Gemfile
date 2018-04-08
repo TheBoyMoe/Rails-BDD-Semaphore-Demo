@@ -25,12 +25,14 @@ group :development, :test do
   gem 'shoulda-matchers',
     git: "https://github.com/thoughtbot/shoulda-matchers.git",
     branch: "rails-5"
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
 end
 
 group :test do
-  gem 'database_cleaner'
-  gem 'rails-controller-testing'
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
+  gem 'capybara', '~> 2.12.0'
+  gem 'simplecov', require: false
 end
 
 group :development do
