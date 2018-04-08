@@ -45,8 +45,8 @@ Given("I am logged in") do
   click_button 'Log in'
 end
 
-When("I click on the logout button") do
-  click_button 'Log out'
+When("I click on the logout link") do
+  click_link 'Log out'
 end
 
 Then("I should be redirected to the log in page") do

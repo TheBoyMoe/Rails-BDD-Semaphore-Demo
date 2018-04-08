@@ -20,7 +20,7 @@ Scenario: User Logs Out
   Given I am a registered user
   And I am logged in
   And I visit the homepage
-  When I click on the logout button
+  When I click on the logout link
   Then I should be redirected to the log in page
 
 
