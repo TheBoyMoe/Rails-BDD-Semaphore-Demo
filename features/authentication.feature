@@ -23,4 +23,3 @@ Scenario: User Logs Out
   When I click on the logout link
   Then I should be redirected to the log in page
 
-
